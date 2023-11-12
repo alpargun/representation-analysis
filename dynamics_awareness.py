@@ -5,7 +5,7 @@
 import numpy as np
 np.random.seed(0)
 
-#%% Init successor states
+#%% Init successor states - Random input for testing. Replace with real embeddings
 
 np.random.seed(0)
 
@@ -16,12 +16,11 @@ succ_repr = all_repr[0]
 random_repr = all_repr[1]
 random_repr
 
-#%%
+#%% Calculate the sum of distances for successor states
 
 sum_total_succ = 0
 prev_repr = succ_repr[0]
 
-# Calculate the sum of distances for successor states
 for repr in succ_repr[1:]:
     dist_repr = repr - prev_repr
     norm_repr = np.linalg.norm(dist_repr, ord=2)

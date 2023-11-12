@@ -2,13 +2,12 @@
 
 import numpy as np
 
-#%% Init successor states
+#%% Init successor states - Random input for testing. Replace with real embeddings
 
 np.random.seed(0)
 
 num_frames = 100
 
-#repr = np.random.uniform(low=-1, high=1, size=(num_frames,2048)) # 4 encoders
 repr = np.random.standard_normal(size=(num_frames,2048)) # 4 encoders
 repr
 
